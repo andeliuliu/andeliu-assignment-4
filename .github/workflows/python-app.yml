@@ -31,4 +31,4 @@ jobs:
         sleep 5  # Allow server time to start
 
     - name: Verify application is running
-      run: curl http://127.0.0.1:5000
+      run: curl http://127.0.0.1:3000
