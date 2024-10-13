@@ -27,8 +27,9 @@ jobs:
 
     - name: Run application
       run: |
-        make run &
-        sleep 5  # Allow server time to start
+        make run > server_log.txt 2>&1 &
+        sleep 10  # Allow server time to start
+        cat server_log.txt  # Display server logs
 
     - name: Verify application is running
       run: curl http://127.0.0.1:3000
